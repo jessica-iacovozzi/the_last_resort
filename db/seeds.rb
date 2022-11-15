@@ -3,6 +3,7 @@
 
 # User seeds
 puts "Cleaning database..."
+Booking.destroy_all
 User.destroy_all
 
 puts "Creating users..."
@@ -71,7 +72,6 @@ puts "Finished!"
 
 # Booking seeds
 puts "Cleaning database..."
-Booking.destroy_all
 
 puts "Creating bookings..."
 @bookings = [{ status: 'Pending',
@@ -99,4 +99,4 @@ puts "Creating bookings..."
   booking = Booking.create!(attributes)
   puts "Created booking ##{booking.id}"
 end
-puts "Done!"
+puts "All done!"
