@@ -39,18 +39,18 @@
                 <div>
                   <h2><%= spell.name %></h2>
                   <p><%= spell.description %></p>
+                  <p><%= spell.location %></p>
                 </div>
-                <h2 class="card-trip-pricing">£99.99</h2>
+                <h2 class="card-trip-pricing">£<%= spell.price%></h2>
                 <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
               </div>
             </div>
           </li>
       <% end %>
         </ul>
-  </div>
-
-  <div class="cards_wrapper">
-        <ul class="card">
+        <%# ----------------------- %>
+        <%# card 2 %>
+    <ul class="card">
       <% @spells.each do |spell| %>
           <li class="card__Separate">
             <div class="card-trip">
@@ -59,15 +59,17 @@
                 <div>
                   <h2><%= spell.name %></h2>
                   <p><%= spell.description %></p>
+                  <p><%= spell.location %></p>
                 </div>
-                <h2 class="card-trip-pricing">£99.99</h2>
+                <h2 class="card-trip-pricing">£<%= spell.price%></h2>
                 <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
               </div>
             </div>
           </li>
       <% end %>
-        </ul>
+    </ul>
   </div>
+
 
   <%# <div class="cards__curve">
     <svg class="cards__curve_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
