@@ -28,13 +28,52 @@
 </div>
 
 <%# Cards section  %>
-<div class="card">
+<div class="cards">
+  <div class="cards_wrapper">
+        <ul class="card">
+      <% @spells.each do |spell| %>
+          <li class="card__Separate">
+            <div class="card-trip">
+              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+              <div class="card-trip-infos">
+                <div>
+                  <h2><%= spell.name %></h2>
+                  <p><%= spell.description %></p>
+                </div>
+                <h2 class="card-trip-pricing">£99.99</h2>
+                <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+              </div>
+            </div>
+          </li>
+      <% end %>
+        </ul>
+  </div>
 
-  <div class="card__curve">
-    <svg class="card_curve_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+  <div class="cards_wrapper">
+        <ul class="card">
+      <% @spells.each do |spell| %>
+          <li class="card__Separate">
+            <div class="card-trip">
+              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+              <div class="card-trip-infos">
+                <div>
+                  <h2><%= spell.name %></h2>
+                  <p><%= spell.description %></p>
+                </div>
+                <h2 class="card-trip-pricing">£99.99</h2>
+                <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+              </div>
+            </div>
+          </li>
+      <% end %>
+        </ul>
+  </div>
+
+  <%# <div class="cards__curve">
+    <svg class="cards__curve_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z" class="shape-fill"></path>
     </svg>
-  </div>
+  </div> %>
 </div>
 
 

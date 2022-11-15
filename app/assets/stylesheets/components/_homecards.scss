@@ -1,0 +1,116 @@
+.cards{
+  height: 100%;
+  width: 100%;
+  background-color: #ec5858;
+  z-index: 2;
+  border:#ffffff00;
+
+  &__curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+  &__curve, &__curve_svg {
+    position: relative;
+    display: block;
+    width: calc(153% + 1.3px);
+    height: 79px;
+  }
+  &__curve .shape-fill {
+    fill: #FFFFFF;
+}
+  &_wrapper{
+    // border: 5px solid rgb(240, 240, 240);
+    // overflow-x: scroll;
+    width: 98%;
+    height: 350px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    flex-shrink:0;
+    gap: 10px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+// -----------
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width:  400px;
+}
+
+.card-trip > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+// My addons
+.card {
+  border: 2px solid rgb(228, 228, 228);
+  // width:400px;
+  // height:500px;
+  border-radius: 5px;
+  list-style: none;
+  // background-color: rgb(236, 174, 236);
+  // padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-shrink: 0;
+  padding: 0;
+  gap: 30px;
+}
+.card__Separate h2{
+  font-size: 1.2rem;
+}
+.card__Separate{
+  width: 400px;
+}
+
+.card-trip-infos {
+  display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
