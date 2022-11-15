@@ -14,7 +14,7 @@
         </li>
           <li class="nav-item"><%= link_to "Home", spells_path, class:"nav-link" %></li>
           <li class="nav-item"><%= link_to "Create a Spell", spells_new_path, class:"nav-link" %></li>
-          <li class="nav-item"><%= link_to "My Spells", spells_new_path, class:"nav-link" %></li>
+          <li class="nav-item"><%= link_to "My Spells", spells_path, class:"nav-link" %></li>
           <li class="nav-item"><%= link_to "My Booking", spells_new_path, class:"nav-link" %></li>
         </ul>
       </div>
@@ -31,12 +31,12 @@
       <ul class="navbar-nav me-auto">
           <div class="nav-margin">
             <li class="nav-item border">
-              <a class="nav-link-register" href="#">Register</a>
+              <%= link_to "Register", user_session_path, class:"nav-link-register" %>
             </li>
           </div>
           <div class="nav-margin">
             <li class="nav-item border">
-              <a class="nav-link-register" href="#">Sign in</a>
+            <%= link_to "Sign in", new_user_session_path, class:"nav-link-register" %>
             </li>
           </div>
         <li class="nav-item dropdown">
