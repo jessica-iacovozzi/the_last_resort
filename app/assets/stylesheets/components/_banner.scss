@@ -1,44 +1,72 @@
 .banner_wrapper{
   height: 450px;
+  width: 100%;
+  position: relative;
 }
 .banner{
   position: relative;
   width: 100%;
   height: 425px;
-  background-color: #ec5858;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   &_text_box {
     // border: 1px solid red;
-    width: 70%;
+    // width: 70%;
     h1{
-      font-family: 'Lato', sans-serif;
+      font-family: 'Lancelot', cursive;
       font-size: 4.2rem;
       margin-top: -100px;
       font-weight: 900;
-      background: -webkit-radial-gradient(#03ffab, #ffffffcb);
+      background: -webkit-radial-gradient(#e60db0, #b8b8b8);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     p{
       font-family: 'Lato', sans-serif;
-      color: white;
+      color: #534747;
       font-weight: 400;
       text-align: center;
       margin-top: 10px;
     }
-    &_btn {
-      font-weight: 600;
-      font-family: 'Lato', sans-serif;
-      padding: 12px 20px;
-      background-color: rgb(22, 145, 221);
+    &_btn{
+      // border: 2px solid red;
+      margin: 0 auto;
+      width: 150px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &_link {
+        display: block;
+        margin: 0 auto;
+        position: absolute;
+        // top: 60%;
+        // left: 50%;
+        font-weight: 600;
+        font-family: 'Lato', sans-serif;
+        padding: 12px 20px;
+        background-color: #ca58d0;
+        color: white;
+        border-radius: 25px;
+        box-shadow: 0px 0px 2px rgba(236, 88, 88, 0.717);
+        transition: all ease .2s;
+        &:hover{
+          transform: scale(1.05);
+          box-shadow: 0px 3px 3px #d358ecc9;
+        }
+      }
+      a{
+        color:white;
+        text-decoration: none;
+      }
     }
   }
 
   &_curve {
     position: absolute;
-    bottom: 0;
+    bottom: -36px;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -46,7 +74,7 @@
     transform: rotate(180deg);
   }
 
-  &_curve svg {
+  &_curve .svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
@@ -54,6 +82,6 @@
   }
 
   &_curve .shape-fill {
-    fill: $body-bg;
+    fill: #ec5858;
   }
 }
