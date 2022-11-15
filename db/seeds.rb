@@ -5,7 +5,7 @@ Spell.destroy_all
 
 puts "Creating spells..."
 love_bond = { name: "Love Bond",
-              user_id: "1",
+              user_id: User.all.sample,
               description: "Make someone fall in love with you",
               location: "Villeray", rating: "5",
               category: "Love",
