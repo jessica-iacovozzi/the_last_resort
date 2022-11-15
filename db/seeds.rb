@@ -17,6 +17,6 @@ eva = { first_name: 'Eva', last_name: 'Roux', address: 'Plateau', email: 'er@gma
 
 [hugo, jessica, giovanni, eva].each do |attributes|
   user = User.create!(attributes)
-  puts "Created #{user.name}"
+  puts "Created #{user.first_name}"
 end
 puts "Finished!"
