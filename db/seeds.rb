@@ -38,35 +38,34 @@ Spell.destroy_all
 
 puts "Creating spells..."
 love_bond = { name: "Love Bond",
-              # user: User.all.sample,
+              user: User.all.sample,
               description: "Make someone fall in love with you",
               location: "Villeray",
               category: "Love",
               price: "95" }
 cook_well = { name: "Cook Well",
-              # user: User.all.sample,
+              user: User.all.sample,
               description: "Bring out the best taste in you dish, everytime", location: "Plateau",
               price: "65",
               category: "Home" }
 disable_stalker = { name: "Disable Stalker",
-                    # user: User.all.sample,
+                    user: User.all.sample,
                     description: "Any stalker who starts following you will suddenly get injured",
                     location: "Montreal", price: "110", category: "Social" }
 block_mother_in_law = { name: "Block Mother In Law",
-                        # user: User.all.sample,
+                        user: User.all.sample,
                         description: "Any call from your mother in law will be mysteriously  redirected",
                         location: "Village",
                         category: "Family",
                         price: "45" }
 always_clean = { name: "Always Clean",
-                #  user: User.all.sample,
+                 user: User.all.sample,
                  description: "Every rooms in your home clean themselves",
                  location: "Mile-End",
                  category: "Home",
                  price: "45" }
 [love_bond, cook_well, disable_stalker, block_mother_in_law, always_clean].each do |attributes|
   spell = Spell.create!(attributes)
-  spell.user = User.all.sample
   puts "Created #{spell.name}"
 end
 puts "Finished!"
