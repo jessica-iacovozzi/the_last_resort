@@ -2,6 +2,7 @@
   height: 450px;
   width: 100%;
   position: relative;
+  z-index:-10;
 }
 .banner{
   position: relative;
@@ -11,6 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
   &_text_box {
     // border: 1px solid red;
     // width: 70%;
@@ -62,6 +64,22 @@
         text-decoration: none;
       }
     }
+  }
+
+  .hero-images{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    top: 50%;
+    right: 40%;
+    width: 100%;
+    height: 100px;
+  }
+  .hero-images{
+    z-index: -1;
+    width: 12vw;
+    height: 100%;
   }
 
   &_curve {
