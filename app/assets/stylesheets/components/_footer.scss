@@ -17,6 +17,7 @@ body {
   min-height: 100vh;
 }
 
+
 .footer {
   display: flex;
   flex-flow: row wrap;
@@ -38,7 +39,7 @@ body {
 .footer__logo {
   font-family: 'Lancelot', cursive;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 35px;
 }
 
 .footer__addr h2 {
