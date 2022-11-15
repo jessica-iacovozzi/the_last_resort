@@ -1,0 +1,59 @@
+.banner_wrapper{
+  height: 450px;
+}
+.banner{
+  position: relative;
+  width: 100%;
+  height: 425px;
+  background-color: #ec5858;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &_text_box {
+    // border: 1px solid red;
+    width: 70%;
+    h1{
+      font-family: 'Lato', sans-serif;
+      font-size: 4.2rem;
+      margin-top: -100px;
+      font-weight: 900;
+      background: -webkit-radial-gradient(#03ffab, #ffffffcb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p{
+      font-family: 'Lato', sans-serif;
+      color: white;
+      font-weight: 400;
+      text-align: center;
+      margin-top: 10px;
+    }
+    &_btn {
+      font-weight: 600;
+      font-family: 'Lato', sans-serif;
+      padding: 12px 20px;
+      background-color: rgb(22, 145, 221);
+    }
+  }
+
+  &_curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  &_curve svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 108px;
+  }
+
+  &_curve .shape-fill {
+    fill: $body-bg;
+  }
+}
