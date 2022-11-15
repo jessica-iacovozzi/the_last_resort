@@ -1,0 +1,105 @@
+.banner_wrapper{
+  height: 450px;
+  width: 100%;
+  position: relative;
+  z-index:-10;
+}
+.banner{
+  position: relative;
+  width: 100%;
+  height: 425px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  &_text_box {
+    // border: 1px solid red;
+    // width: 70%;
+    h1{
+      font-family: 'Lancelot', cursive;
+      font-size: 4.2rem;
+      margin-top: -100px;
+      font-weight: 900;
+      background: -webkit-radial-gradient(#e60db0, #b8b8b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p{
+      font-family: 'Lato', sans-serif;
+      color: #534747;
+      font-weight: 400;
+      text-align: center;
+      margin-top: 10px;
+    }
+    &_btn{
+      // border: 2px solid red;
+      margin: 0 auto;
+      width: 150px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &_link {
+        display: block;
+        margin: 0 auto;
+        position: absolute;
+        // top: 60%;
+        // left: 50%;
+        font-weight: 600;
+        font-family: 'Lato', sans-serif;
+        padding: 12px 20px;
+        background-color: #ca58d0;
+        color: white;
+        border-radius: 25px;
+        box-shadow: 0px 0px 2px rgba(236, 88, 88, 0.717);
+        transition: all ease .2s;
+        &:hover{
+          transform: scale(1.05);
+          box-shadow: 0px 3px 3px #d358ecc9;
+        }
+      }
+      a{
+        color:white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .hero-images{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    top: 50%;
+    right: 40%;
+    width: 100%;
+    height: 100px;
+  }
+  .hero-images{
+    z-index: -1;
+    width: 12vw;
+    height: 100%;
+  }
+
+  &_curve {
+    position: absolute;
+    bottom: -36px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  &_curve .svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 108px;
+  }
+
+  &_curve .shape-fill {
+    fill: #ec5858;
+  }
+}
