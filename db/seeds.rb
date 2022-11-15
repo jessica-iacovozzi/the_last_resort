@@ -99,4 +99,4 @@ puts "Creating bookings..."
   booking = Booking.create!(attributes)
   puts "Created booking ##{booking.id}"
 end
-puts "Done!"
+puts "All done!"
