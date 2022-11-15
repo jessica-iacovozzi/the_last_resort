@@ -12,7 +12,7 @@
       <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
         </li>
-          <li class="nav-item"><a class="nav-link " href="#">Spells</a></li>
+          <li class="nav-item nav-link"><%= link_to "Create a Spell", "/ruby-book" %></li>
           <li class="nav-item"><a class="nav-link " href="#">Contact</a></li>
           <li class="nav-item"><a class="nav-link " href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link " href="#">Message</a></li>
@@ -45,8 +45,6 @@
                 <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a>
                 <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
-  #               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete},
-  #               class: "dropdown-item" %>
             </div>
         </li>
         <!--li class="nav-item"-->
