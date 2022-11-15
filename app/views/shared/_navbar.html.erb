@@ -1,0 +1,55 @@
+<nav>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lastresort">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+      <%= image_tag ("last-resort.png") %>
+    </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+    <div class ="container-nav">
+      <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        </li>
+          <li class="nav-item"><a class="nav-link " href="#">Spells</a></li>
+          <li class="nav-item"><a class="nav-link " href="#">Contact</a></li>
+          <li class="nav-item"><a class="nav-link " href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="#">Message</a></li>
+        </ul>
+      </div>
+
+      <div class="search">
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search.." aria-label="Search">
+          <button class="btn  my-2 my-sm-0" type="submit">Search</button
+        </form>
+      </div>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+          <div class="nav-margin">
+            <li class="nav-item border">
+              <a class="nav-link" href="#">Register</a>
+            </li>
+          </div>
+          <div class="nav-margin">
+            <li class="nav-item border">
+              <a class="nav-link" href="#">Sign in</a>
+            </li>
+          </div>
+        <li class="nav-item dropdown">
+            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
+            </div>
+        </li>
+        <!--li class="nav-item"-->
+        <!--/li-->
+      </ul>
+    </div>
+  </div>
+</nav>
