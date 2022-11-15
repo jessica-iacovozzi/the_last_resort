@@ -1,2 +1,9 @@
-<h1>Spells#new</h1>
-<p>Find me in app/views/spells/new.html.erb</p>
+<h1>Create a Spell</h1>
+
+<%= render "form", spell: @spell %>
+
+<br>
+
+<div>
+  <%= link_to "Back to spells", spells_path %>
+</div>
