@@ -2,7 +2,7 @@
 .card-section{
   // max-width: 1400px;
   // height: 913px;
-  background-color: #ec5858;
+  background-color: $bg-main;
     margin: 40px auto 0;
     width: 100vw;
     // border: 1px solid red;
@@ -54,7 +54,7 @@
     height: 79px;
   }
   &__curve .shape-fill {
-    fill: #FFFFFF;
+    fill: $white;
   }
 }
 // -----------
@@ -65,7 +65,7 @@
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   // width:  400px;
   // -----
-  background: white;
+  background: $white;
   width: 273px;
   /* padding-bottom: 20px; */
   /* height: 200px; */
@@ -125,7 +125,7 @@
   align-items: flex-end;
   align-content: flex-start;
   flex-wrap: nowrap;
-  color: black;
+  color: $black;
 }
 
 .card-trip-infos .card-trip-user {
@@ -135,9 +135,9 @@
   width: 40px;
 }
 .price{
-  color: green;
+  color:$card-dollar-green;
   span{
-    color:  gold;
+    color:  $card-gold;
   }
 }
 
@@ -163,7 +163,7 @@
   // }
 }
 .card {
-  border: 2px solid rgb(228, 228, 228);
+  border: 2px solid $border;
   width:100%;
   // height:500px;
   border-radius: 5px;
@@ -177,7 +177,7 @@
   flex-shrink: 0;
   padding: 0;
   gap: 30px;
-  background-color: #ec5858;
+  background-color: $bg-main;
   overflow-x: scroll;
 }
 .card__Separate{

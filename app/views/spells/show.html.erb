@@ -1,5 +1,22 @@
-<h2><%= @spell.name %></h2>
-<%= @spell.description %>
-<%= @spell.category %>
-<%= @spell.location%>
-<%= @spell.price%>
+<div class="show__container">
+  <div class="show_wrapper">
+    <div class="show__text">
+      <h2><%= @spell.name %></h2>
+      <div class="show__text_box">
+        <p>Description:</p>
+        <p><%= @spell.description %></p>
+        <p>Category: <%= @spell.category %></p>
+        <p>Location: <%= @spell.location%></p>
+      </div>
+      <p class= 'show-price'>Price: $<%= @spell.price%></p>
+      <div class="flex__link">
+        <%= link_to bookings_new_path, class: 'linnn' do %>
+          <h2 class="nav-link-register booking_link"> Book <%= @spell.name %></h2>
+        <% end %>
+      </div>
+    </div>
+    <div class="show__img_box">
+        <%= image_tag @background_img.sample, class: 'show__img' %>
+    </div>
+  </div>
+</div>
