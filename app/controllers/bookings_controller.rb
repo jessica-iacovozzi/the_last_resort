@@ -9,6 +9,11 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
+  def requested_spells
+    #  = Booking.where(current_user)
+    @bookings = current_user.spell_bookings
+  end
+
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
