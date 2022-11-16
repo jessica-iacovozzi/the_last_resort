@@ -3,6 +3,11 @@ class SpellsController < ApplicationController
     @spells = Spell.all
   end
 
+  def my_spells
+    @user = current_user
+    @spells = Spell.where(user_id: current_user)
+  end
+
   def new
     @spell = Spell.new
   end
