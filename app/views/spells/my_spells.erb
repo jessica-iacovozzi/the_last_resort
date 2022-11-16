@@ -1,2 +1,8 @@
-<h1>hello</h1>
-<%= @spells %>
+<h1>My Spells</h1>
+<% @spells.each do |spell| %>
+<h2><%= spell.name %></h2>
+<%= spell.description %>
+<%= spell.category %>
+<%= spell.location%>
+<%= spell.price%>
+<% end %>
