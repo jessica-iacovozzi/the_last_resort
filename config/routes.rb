@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   post '/bookings', to: 'bookings#create'
   get '/my_bookings', to: 'bookings#my_bookings'
   get '/bookings/:id', to: 'bookings#show', as: 'booking'
+  get '/requested_spells', to: 'bookings#requested_spells'
   delete '/bookings/:id', to: 'bookings#destroy'
 
   devise_for :users

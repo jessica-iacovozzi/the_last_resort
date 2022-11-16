@@ -1,0 +1,8 @@
+<h1>Requested Spells</h1>
+<% @bookings.each do |booking| %>
+<h2><%= booking.spell.name %></h2>
+<p>From : <%= booking.user.first_name %></p>
+<p>Starts on:<%= booking.start_date %></p>
+<p>Ends on:<%= booking.end_date %></p>
+<p>Status:<%= booking.status %></p>
+<% end %>
