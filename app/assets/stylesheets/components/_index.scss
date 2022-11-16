@@ -6,3 +6,25 @@
 @import "form_legend_clear";
 @import "navbar";
 @import "footer";
+
+.index_title{
+  background-color: #ec5858;
+  color: white;
+  padding: 10px;
+  margin-bottom: -22px;
+  text-align: center;
+  z-index: 1;
+}
+.card-section--mod{
+  background-color: #ec5858;
+  margin: 0px auto 0;
+  width: 100vw;
+}
+
+.text__box--adj{
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
