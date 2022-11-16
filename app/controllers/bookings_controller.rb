@@ -13,8 +13,10 @@ class BookingsController < ApplicationController
   end
 
   def my_bookings
+    @bookings = Booking.where(user_id: current_user)
   end
 
-  def delete
+  def destroy
+    @booking = Booking.find(params[:id])
   end
 end

@@ -1,10 +1,11 @@
-<h1>My bookings</h1>
+<div class="container">
+  <h1>My bookings</h1>
 
-<ul>
-<%= @bookings.current_user.each do |booking| %>
-  <li> <%= booking.status %></li>
-  <li> <%= booking.spell %></li>
-  <li> <%= booking.start_date %></li>
-  <li> <%= booking.end_date %></li>
-<% end %>
-</ul>
+  <ul>
+  <% @bookings.each do |booking| %>
+    <li>Status: <%= booking.status %></li>
+    <li>Spell: <%= booking.spell.name %></li>
+    <li>When: from <%= booking.start_date %> to  <%= booking.end_date %></li>
+  <% end %>
+  </ul>
+</div>
