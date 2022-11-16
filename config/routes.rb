@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   post '/bookings', to: 'bookings#create'
   get '/my_bookings', to: 'bookings#my_bookings'
   get '/bookings/:id', to: 'bookings#show', as: 'booking'
+  delete '/bookings/:id', to: 'bookings#destroy'
+
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
