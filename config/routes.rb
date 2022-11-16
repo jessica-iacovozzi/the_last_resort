@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/spells', to: 'spells#index'
   get '/spells/new', to: 'spells#new'
   post '/spells', to: 'spells#create'
+  get '/spell/:id', to: 'spells#show', as: 'spell'
+  get '/my_spells', to: 'spells#my_spells'
   # Defines the root path route ("/")
   # root "articles#index"
 end
