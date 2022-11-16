@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>My bookings</h1>
+
+  <ul>
+  <% @bookings.each do |booking| %>
+    <li>Status: <%= booking.status %></li>
+    <li>Spell: <%= booking.spell.name %></li>
+    <li>When: from <%= booking.start_date %> to  <%= booking.end_date %></li>
+  <% end %>
+  </ul>
+</div>
