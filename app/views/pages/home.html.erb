@@ -1,8 +1,3 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
-
-
 <div class="banner_wrapper">
   <div class="banner">
     <div class="banner_text_box">
@@ -27,16 +22,31 @@
   </div>
 </div>
 
-<%# Cards section  %>
-<div class="card">
-
-  <div class="card__curve">
-    <svg class="card_curve_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z" class="shape-fill"></path>
-    </svg>
-  </div>
-</div>
-
-
-<div class='footer__wrapper'>
+<div class="card-section">
+  <%# Cards section  %>
+  <%# <div class="cards">
+    <div class="cards_wrapper"> %>
+      <ul class="cards">
+      <div class="cards__wrapper_resize">
+        <% @spells.each do |spell| %>
+          <li class="card__Separate">
+          <%= link_to spells_path do %>
+              <div class="card-trip">
+                <%# <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" /> %>
+                <%= image_tag @background_img.sample %>
+                <div class="card-trip-infos">
+                  <div>
+                    <h2><%= spell.name %></h2>
+                    <p><%= spell.location %></p>
+                  </div>
+                  <h2 class="card-trip-pricing price">£<%= spell.price%></h2>
+                  <%= image_tag @user_img.sample, class: 'card-trip-user avatar-bordered' %>
+                </div>
+              </div>
+          <% end %>
+            </li>
+        <% end %>
+        </div>
+      </ul>
+    <%# </div> %>
 </div>

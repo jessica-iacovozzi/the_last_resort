@@ -32,12 +32,12 @@
       <ul class="navbar-nav me-auto">
           <div class="nav-margin">
             <li class="nav-item border">
-              <%= link_to "Register", new_user_session_path, class:"nav-link-register" %>
+              <a class="nav-link-register" href="#">Register</a>
             </li>
           </div>
           <div class="nav-margin">
             <li class="nav-item border">
-            <%= link_to "Sign in", user_session_path, class:"nav-link-register" %>
+              <a class="nav-link-register" href="#">Sign in</a>
             </li>
           </div>
           <div class="nav-margin">
@@ -48,9 +48,9 @@
         <li class="nav-item dropdown">
             <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to "My Spells", my_spells_path, class:"dropdown-item" %>
-                <%= link_to "My Booking", spells_new_path, class:"dropdown-item" %>
-                <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
             </div>
         </li>
         <!--li class="nav-item"-->
