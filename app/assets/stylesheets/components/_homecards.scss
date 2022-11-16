@@ -1,11 +1,33 @@
-.cards{
-  height: 100%;
-  width: 100%;
+
+.card-section{
+  max-width: 1400px;
+  // height: 913px;
   background-color: #ec5858;
-  z-index: 2;
-  border:#ffffff00;
+  margin: 40px auto;
+    // border: 1px solid red;
+}
+.cards{
+  // height: 100%;
+  // width: 80%;
+  // background-color: #ec5858;
+  // z-index: 2;
+  // border:#ffffff00;
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  /* flex-shrink: 0; */
+  /* justify-content: flex-start; */
+  /* align-items: center; */
+  /* flex-direction: row; */
+  /* overflow-x: scroll; */
+  width: 850px;
+  margin: 0 auto;
+  list-style: none;
+  gap: 19px;
+  /* height: 100%; */
+  /* padding-bottom: 96px; */
+  /* padding-top: 39px; */
+  padding: 39px 0px 96px 0px;
+  // border: 1px solid red;
 
   &__curve {
     position: absolute;
@@ -23,45 +45,50 @@
   }
   &__curve .shape-fill {
     fill: #FFFFFF;
-}
-  &_wrapper{
-    // border: 5px solid rgb(240, 240, 240);
-    // overflow-x: scroll;
-    // width: 99%;
-    // height: 350px;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-    overflow-x: scroll;
-    flex-shrink:0;
-    gap: 10px;
-    border-radius: 5px;
-    &::-webkit-scrollbar {
-      display: none;
-    }
   }
 }
 // -----------
 
 .card-trip {
-  overflow: hidden;
+  // overflow: hidden;
+  // background: white;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // width:  400px;
+  // -----
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width:  400px;
+  // box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 270px;
+  /* padding-bottom: 20px; */
+  /* height: 200px; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
+  /* margin: 20px auto; */
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  flex-direction: column;
 }
 
 .card-trip > img {
-  height: 200px;
+  // height: 200px;
+  // width: 300px;
+  // object-fit: cover;
+  // -----
+  height: 226px;
   width: 100%;
-  object-fit: cover;
 }
 
 .card-trip h2 {
-  font-size: 16px;
+  // font-size: 16px;
   font-weight: bold;
   margin: 0;
+  // ------------
+  font-size: .90rem;
+
 }
 
 .card-trip p {
@@ -72,11 +99,23 @@
 
 
 .card-trip .card-trip-infos {
-  padding: 16px;
+  // padding: 4px;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: flex-end;
+  // position: relative;
+  // background-color: #F4F4F4;
+
+  // -----------
+  padding: 10px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   position: relative;
+  background-color: #F4F4F4;
+  align-items: flex-end;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  color: black;
 }
 
 .card-trip-infos .card-trip-user {
@@ -85,11 +124,37 @@
   top: -20px;
   width: 40px;
 }
+.price{
+  color: green;
+  span{
+    color:  gold;
+  }
+}
 
 // My addons
+
+.cards_wrapper{
+  // border: 5px solid rgb(240, 240, 240);
+  // overflow-x: scroll;
+  // height: 350px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 99%;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: scroll;
+  flex-shrink:0;
+  gap: 10px;
+  border-radius: 5px;
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
+}
 .card {
   border: 2px solid rgb(228, 228, 228);
-  // width:400px;
+  width:100%;
   // height:500px;
   border-radius: 5px;
   list-style: none;
@@ -102,12 +167,18 @@
   flex-shrink: 0;
   padding: 0;
   gap: 30px;
+  background-color: #ec5858;
+  overflow-x: scroll;
+}
+.card__Separate{
+  position: relative;
+  // padding-bottom: 6px;
+  a:link, a:visited{
+    text-decoration: none;
+  }
 }
 .card__Separate h2{
   font-size: 1.2rem;
-}
-.card__Separate{
-  width: 400px;
 }
 
 .card-trip-infos {
@@ -116,4 +187,77 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-end;
+}
+
+
+
+// ---------------------------
+
+.contain{
+  display: flex;
+  flex-flow: row wrap;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 30px;
+}
+.link__box{
+  position: relative;
+}
+.index__card {
+  // border-top: 5px solid rgb(175, 184, 41);
+  border-left: 5px solid rgba(184, 41, 151, 0.98);
+  border-right: 5px solid rgb(41, 63, 184);
+  border-radius: 20px;
+  width: 350px;
+  height: 200px;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  // background-color: rgba($bg-secondary, 0.8);
+  color: #F4F4F4;
+  box-shadow: 0px 0px 8px rgba(255, 0, 0, 0.654);
+  transition: all .2s ease;
+  a:link, a:visited, a:hover, a:active{
+    color: #F4F4F4;
+  }
+  &_poster{
+    border: 5px solid white;
+    object-fit: scale-down;
+    height: 100%;
+  }
+  &_homeText{
+    font-size: 2.4rem;
+    text-align: center;
+    font-weight: 700;
+  }
+  &_text {
+    h3 {
+      font-size: 2.4rem;
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+  &:link, &:visited{
+    color: #F4F4F4;
+  }
+  &:hover,&:active{
+    transform: scale(1.05);
+    box-shadow: 5px 10px 10px rgba(255, 0, 0, 0.654);
+  }
+}
+.index__card_text_link:link, .index__card_text_link:visited{
+  color: #F4F4F4;
+}
+.photo{
+  background-size: cover;
 }
