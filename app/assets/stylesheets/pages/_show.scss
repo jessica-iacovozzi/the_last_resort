@@ -22,13 +22,13 @@
   border: 5px solid lightgrey;
   padding: 10px
 }
-.show__text, h2{
+.show__text, .show_text_h2{
   color: $black;
   font-family: 'Lancelot', cursive;
   margin: 0;
   width: 350px;
 }
-.show__text > h2{
+.show__text > .show_text_h2{
   // font-family: 'Lancelot', cursive;
   font-size: 4rem;
   text-align: center;
