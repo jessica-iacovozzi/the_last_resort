@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   post '/bookings', to: 'bookings#create'
   get '/my_bookings', to: 'bookings#my_bookings'
   get '/bookings/:id', to: 'bookings#show', as: 'booking'
-  delete '/bookings/:id', to: 'bookings#destroy'
+  delete '/bookings/:id', to: 'bookings#destroy', as: 'cancel_booking'
 
   devise_for :users
   root to: "pages#home"
