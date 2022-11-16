@@ -1,11 +1,18 @@
 <div class="container">
   <h1>My bookings</h1>
 
-  <ul>
   <% @bookings.each do |booking| %>
-    <li>Status: <%= booking.status %></li>
-    <li>Spell: <%= booking.spell.name %></li>
-    <li>When: from <%= booking.start_date %> to  <%= booking.end_date %></li>
+    <div class="notification">
+      <%= image_tag "https://res.cloudinary.com/dppymdnxh/image/upload/v1668616924/spell%20images/vera-velichko-potions-poison-skull-wallpaper_vornxb.jpg", height:60, weight:60 %>
+      <div class="notification-content">
+        <p><small><%= booking.start_date %> to  <%= booking.end_date %></small></p>
+        <p><%= booking.spell.name %></p>
+        <p><strong><%= booking.status %></strong></p>
+      </div>
+
+      <div class="notification-actions">
+        <%= link_to "Cancel", cancel_booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      </div>
+    </div>
   <% end %>
-  </ul>
 </div>
