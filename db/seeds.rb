@@ -44,7 +44,8 @@ love_bond = { name: "Love Bond",
               location: "Villeray",
               category: "Love",
               price: "95" }
-cook_well = { name: "Cook Well", user: User.all.sample,
+cook_well = { name: "Cook Well",
+              user: User.all.sample,
               description: "Bring out the best taste in you dish, everytime", location: "Plateau",
               price: "65",
               category: "Home" }
