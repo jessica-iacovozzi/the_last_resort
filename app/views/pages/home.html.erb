@@ -27,6 +27,7 @@
   <%# <div class="cards">
     <div class="cards_wrapper"> %>
       <ul class="cards">
+      <div class="cards__wrapper_resize">
         <% @spells.each do |spell| %>
           <li class="card__Separate">
           <%= link_to spells_path do %>
@@ -45,6 +46,7 @@
           <% end %>
             </li>
         <% end %>
+        </div>
       </ul>
     <%# </div> %>
 </div>
