@@ -1,4 +1,4 @@
-<h2><%= @booking.status %></h2>
-<%= @booking.spell %>
-<%= @booking.start_date %>
-<%= @booking.end_date%>
+<h2>Spell: <%= link_to @booking.spell.name, spell_path(@spell) %></h2>
+<h4>Booking Status: <%= @booking.status %></h4>
+<p>Starting date: <%= @booking.start_date %></p>
+<p>Ending date: <%= @booking.end_date%></p>
