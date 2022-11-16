@@ -4,7 +4,6 @@ class SpellsController < ApplicationController
   end
 
   def my_spells
-    @user = current_user
     @spells = Spell.where(user_id: current_user)
   end
 
