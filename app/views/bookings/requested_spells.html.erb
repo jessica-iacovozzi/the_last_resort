@@ -1,8 +1,19 @@
-<h1>Requested Spells</h1>
-<% @bookings.each do |booking| %>
-<h2><%= booking.spell.name %></h2>
-<p>From : <%= booking.user.first_name %></p>
-<p>Starts on:<%= booking.start_date %></p>
-<p>Ends on:<%= booking.end_date %></p>
-<p>Status:<%= booking.status %></p>
-<% end %>
+<div class="container">
+  <h1>My requested spells</h1>
+
+  <% @bookings.each do |booking| %>
+    <div class="notification" data-controller="bookings">
+      <%= image_tag "https://res.cloudinary.com/dppymdnxh/image/upload/v1668616924/spell%20images/vera-velichko-potions-poison-skull-wallpaper_vornxb.jpg", height:60, weight:60 %>
+      <div class="notification-content">
+        <p><small><%= booking.start_date %> to  <%= booking.end_date %></small></p>
+        <p><%= booking.spell.name %></p>
+        <p><strong><%= booking.status %></strong></p>
+      </div>
+
+      <div class="notification-actions">
+        <a id="Accept" data-action="bookings#update">Accept</a>
+        <a id="Decline" data-action="bookings#update">Decline</a>
+      </div>
+    </div>
+  <% end %>
+</div>

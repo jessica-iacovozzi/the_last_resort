@@ -9,3 +9,6 @@ application.register("hello", HelloController)
 
 import MapController from "./map_controller"
 application.register("map", MapController)
+
+import SpellStatusController from "./spell_status_controller"
+application.register("spell-status", SpellStatusController)

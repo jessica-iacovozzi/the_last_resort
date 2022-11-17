@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   delete '/bookings/:id', to: 'bookings#destroy', as: 'cancel_booking'
 
   resources :spells, only: %i[index new create show] do
-    resources :bookings, only: %i[new create]
+    resources :bookings, only: %i[new create update]
   end
 
   devise_for :users

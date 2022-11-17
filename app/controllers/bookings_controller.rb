@@ -36,6 +36,11 @@ class BookingsController < ApplicationController
     redirect_to booking_path, status: :see_other
   end
 
+  def update
+    @booking = Booking.find(params[:id])
+    redirect_to my_bookings_path, status: :see_other
+  end
+
   private
 
   def booking_params
