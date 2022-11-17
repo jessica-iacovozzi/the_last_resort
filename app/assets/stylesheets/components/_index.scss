@@ -14,15 +14,18 @@
   background-color: #ec5858;
   color: white;
   padding: 10px;
-  margin-bottom: -22px;
+  // margin-bottom: -22px;
   text-align: center;
   z-index: 1;
+  margin: 0;
 }
+
 .card-section--mod{
   background-color: #ec5858;
-  margin: 0px auto 0;
+  margin: 0 auto;
   width: 100vw;
 }
+
 .text__box--adj{
   height: 100px;
   display: flex;

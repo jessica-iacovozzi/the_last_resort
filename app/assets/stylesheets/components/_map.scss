@@ -6,3 +6,28 @@
   text-align: center;
   font-family: "Open Sans", sans-serif;
 }
+
+.main-container {
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+  display: flex;
+  // padding-right: 20px;
+  justify-content: space-around;
+}
+
+.map {
+  // height: 100vh;
+  // width: 50vw;
+  height: 100vh;
+  top: 0;
+}
+
+.map-container {
+  width: 50vw;
+  background: #ec5858;
+  padding-right: 30px;
+}
+
+#map {
+  position: sticky;
+}
