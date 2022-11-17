@@ -3,6 +3,9 @@
   width: 100vw;
   height: 100%;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .show_wrapper{
   width: 700px;
@@ -10,34 +13,47 @@
   // padding-top: 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   gap: 20px;
-  height: 460px;
+  min-height: 460px;
 }
 .show__text{
   background-color: rgb(254, 254, 254);
   border-radius: 25px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
-  height: 350px;
+  // height: 350px;
+  // width: 100%;
+  min-width: 380px;
+  min-height: 350px;
   border: 5px solid lightgrey;
-  padding: 10px
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  // align-items: center;
 }
 .show__text, .show_text_h2{
   color: $black;
   font-family: 'Lancelot', cursive;
-  margin: 0;
-  width: 350px;
+  margin: 0 auto;
+  // min-width: 350px;
+  // display: inline-block;
 }
 .show__text > .show_text_h2{
   // font-family: 'Lancelot', cursive;
-  font-size: 4rem;
+  font-size: 2rem;
   text-align: center;
+  // margin-bottom:
 }
 .show__text > p{
   font-size: 1.2rem;
   padding: 0;
   margin: 0;
   font-family: 'Lato', cursive;
+}
+.spell__first_name{
+  font-size: 1.2rem;
 }
 .show__img{
   width: 350px;
@@ -56,6 +72,9 @@
 .show-price{
   text-align: center;
 }
+.show-price span {
+  color: $card-dollar-green;
+}
 .booking_link:link, booking_link:visited{
   text-decoration: none;
 }
@@ -64,11 +83,27 @@
   justify-content: center;
   align-items: center;
 }
-
-.linnn{
-  text-decoration: none;
-}
-
 .show__text_box{
   font-size: 1.2rem;
+}
+.desc__box{
+  padding-left: 5px;
+}
+.desc{
+  margin: 0;
+  display: inline-block;
+  font-weight: 700;
+}
+.category_location{
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+}
+.booking_link--show {
+  text-align: center;
+  border: 2px solid grey;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 1.4rem;;
 }
