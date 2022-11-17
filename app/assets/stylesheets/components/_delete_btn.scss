@@ -33,11 +33,11 @@
   color: white;
   transition: all 0.2s ease;
   &:link, &:visited{
-    color: $delete_btn;
+    color: white;
   }
   &:hover, &:active{
     transform: scale(1.2);
-    color: $delete_btn;
+    color: white;
   }
   // @media screen and (max-width: 60em) {
   //   top: -20px;

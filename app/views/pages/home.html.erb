@@ -45,9 +45,7 @@
                   <%# images  %>
                   <%= cl_image_tag spell.photo.key, class:'card-trip-user avatar-bordered'%>
 
-                  <%= image_tag @user_img.sample, class: 'card-trip-user avatar-bordered' %>
-                  <div class="index__card", style="background-image: url(<%= spell.photo.attached? ? cl_image_path(spell.photo.key) : asset_path(@images.sample) %>)">
-                    <%= link_to fa_icon("circle-xmark"), list, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: 'delete__btn--index'%>
+
                 </div>
                   <%# user image end editing %>
 
