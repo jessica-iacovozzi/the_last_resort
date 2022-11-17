@@ -11,8 +11,8 @@
       </div>
 
       <div class="notification-actions">
-        <a id="Accept" data-action="bookings#update">Accept</a>
-        <a id="Decline" data-action="bookings#update">Decline</a>
+      <%= link_to "Accept", accept_booking_path(booking)%>
+      <%= link_to "Decline", decline_booking_path(booking)%>
       </div>
     </div>
   <% end %>

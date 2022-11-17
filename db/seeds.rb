@@ -75,23 +75,19 @@ puts "Finished!"
 puts "Cleaning database..."
 
 puts "Creating bookings..."
-@bookings = [{ status: 'Pending',
-               start_date: Date.new(2022, 11, 20),
+@bookings = [{ start_date: Date.new(2022, 11, 20),
                end_date: Date.new(2022, 11, 24),
                user: User.all.sample,
                spell: Spell.all.sample },
-             { status: 'Pending',
-               start_date: Date.new(2022, 11, 19),
+             { start_date: Date.new(2022, 11, 19),
                end_date: Date.new(2022, 11, 23),
                user: User.all.sample,
                spell: Spell.all.sample },
-             { status: 'Accepted',
-               start_date: Date.new(2022, 11, 20),
+             { start_date: Date.new(2022, 11, 20),
                end_date: Date.new(2022, 11, 27),
                user: User.all.sample,
                spell: Spell.all.sample },
-             { status: 'Declined',
-               start_date: Date.new(2022, 11, 23),
+             { start_date: Date.new(2022, 11, 23),
                end_date: Date.new(2022, 11, 27),
                user: User.all.sample,
                spell: Spell.all.sample }]

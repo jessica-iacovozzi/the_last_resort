@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   delete '/bookings/:id', to: 'bookings#destroy', as: 'cancel_booking'
 
   resources :spells, only: %i[index new create show] do
-    resources :bookings, only: %i[new create update]
+    resources :bookings, only: %i[new create]
   end
 
   devise_for :users
@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   # post '/spells', to: 'spells#create'
   # get '/spells/:id', to: 'spells#show', as: 'spell'
   get '/my_spells', to: 'spells#my_spells'
+  get '/bookings/:id/accepted', to: 'bookings#accepted', as: 'accept_booking'
+  get '/bookings/:id/declined', to: 'bookings#declined', as: 'decline_booking'
   # Defines the root path route ("/")
   # root "articles#index"
 end
