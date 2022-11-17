@@ -6,6 +6,7 @@
       <%= image_tag "https://res.cloudinary.com/dppymdnxh/image/upload/v1668616924/spell%20images/vera-velichko-potions-poison-skull-wallpaper_vornxb.jpg", height:60, weight:60 %>
       <div class="notification-content">
         <p><small><%= booking.start_date %> to  <%= booking.end_date %></small></p>
+        <p><%= booking.user.first_name %></p>
         <p><%= booking.spell.name %></p>
         <p><strong><%= booking.status %></strong></p>
       </div>
