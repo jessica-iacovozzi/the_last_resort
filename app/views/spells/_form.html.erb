@@ -5,7 +5,7 @@
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :description %>
-    <%= f.input :category %>
+    <%= f.input :category, collection: ['Home', 'Self', 'Love', 'Social', 'Family', 'Career'] %>
     <%= f.input :location %>
     <%= f.input :price %>
     <%= f.input :photo, as: :file %>
@@ -15,3 +15,8 @@
     <%= f.button :submit %>
   </div>
 <% end %>
+
+<%= f.input :location,
+  input_html: {data: {location_autocomplete_target: "location"}},
+  wrapper_html: {data: {controller: "location-autocomplete", location_autocomplete_api_key_value: ENV["MAPBOX_API"]}}
+%>

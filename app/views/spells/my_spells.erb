@@ -1,20 +1,16 @@
 <h1 class='index_title'>My Spells</h1>
 <% @spells.map do |spell| %>
-
   <div class="show__container">
     <div class="show_wrapper">
-
       <div class="show__text">
         <h2 class='show_text_h2'>
           <%= spell.name %>
-
         </h2>
         <div class="show__text_box">
-
-        <div class="desc__box">
-          <p class="desc">Description:</p>
-          <p><%= spell.description %></p>
-        </div>
+          <div class="desc__box">
+            <p class="desc">Description:</p>
+            <p><%= spell.description %></p>
+          </div>
           <div>
             <p class="category_location">
               <span><span class="desc">Category:</span> <%= spell.category %></span> <span><span class="desc">Location:</span> <%= spell.location%></span>

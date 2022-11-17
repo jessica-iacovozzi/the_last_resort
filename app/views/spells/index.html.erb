@@ -1,4 +1,11 @@
 <h1 class='index_title'>All Spells</h1>
+
+<div style="width: 100%; height: 600px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API'] %>">
+</div>
+
 <div class="card-section--mod">
   <ul class="cards">
     <div class="cards__wrapper_resize">
