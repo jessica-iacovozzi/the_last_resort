@@ -25,7 +25,9 @@
       </div>
     </div>
     <div class="show__img_box">
-
+      <% if @spell.photo.attached? %>
+      <%= cl_image_tag @spell.photo.key, class: 'show__img' %>
+      <% end  %>
     </div>
   </div>
 </div>
