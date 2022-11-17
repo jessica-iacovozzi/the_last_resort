@@ -10,7 +10,6 @@ class BookingsController < ApplicationController
   end
 
   def requested_spells
-    #  = Booking.where(current_user)
     @bookings = current_user.spell_bookings
   end
 
@@ -34,6 +33,20 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.destroy
     redirect_to booking_path, status: :see_other
+  end
+
+  def accepted
+    @booking = Booking.find(params[:id])
+    @booking.status = "Accepted"
+    @booking.save
+    redirect_to requested_spells_path
+  end
+
+  def declined
+    @booking = Booking.find(params[:id])
+    @booking.status = "Declined"
+    @booking.save
+    redirect_to requested_spells_path
   end
 
   private
