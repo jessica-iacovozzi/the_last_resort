@@ -7,6 +7,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @spell = Spell.find(params[:spell_id])
   end
 
   def requested_spells
@@ -16,8 +17,9 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @spell = Spell.find(params[:spell_id])
     @booking.user = current_user
-
+    @booking.spell_id = params[:spell_id]
     if @booking.save
       redirect_to my_bookings_path, notice: "Your booking is created!"
     else

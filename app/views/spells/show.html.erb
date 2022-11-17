@@ -10,7 +10,7 @@
       </div>
       <p class= 'show-price'>Price: $<%= @spell.price%></p>
       <div class="flex__link">
-        <%= link_to bookings_new_path, class: 'linnn' do %>
+        <%= link_to new_spell_booking_path(@spell), class: 'linnn' do %>
           <h2 class="nav-link-register booking_link"> Book <%= @spell.name %></h2>
         <% end %>
       </div>
