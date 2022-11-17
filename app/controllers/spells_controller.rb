@@ -36,7 +36,7 @@ class SpellsController < ApplicationController
   private
 
   def spell_params
-    params.require(:spell).permit(:name, :category, :description, :location, :price)
+    params.require(:spell).permit(:name, :category, :description, :location, :price, :photo)
   end
 
   def images

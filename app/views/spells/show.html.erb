@@ -1,16 +1,25 @@
 <div class="show__container">
   <div class="show_wrapper">
     <div class="show__text">
-      <h2 class='show_text_h2'><%= @spell.name %></h2>
+      <h2 class='show_text_h2'>
+        <%= @spell.name %>
+        <p class="spell__first_name">By <%= @spell.user.first_name%></p>
+      </h2>
       <div class="show__text_box">
-        <p>Description:</p>
+
+      <div class="desc__box">
+        <p class="desc">Description:</p>
         <p><%= @spell.description %></p>
-        <p>Category: <%= @spell.category %></p>
-        <p>Location: <%= @spell.location%></p>
       </div>
-      <p class= 'show-price'>Price: $<%= @spell.price%></p>
+        <div>
+          <p class="category_location">
+            <span><span class="desc">Category:</span> <%= @spell.category %></span> <span><span class="desc">Location:</span> <%= @spell.location%></span>
+          </p>
+        </div>
+      </div>
+      <p class= 'show-price'>Price: <span>$<%= @spell.price%></span></p>
       <div class="flex__link">
-        <%= link_to bookings_new_path, class: 'linnn' do %>
+        <%= link_to new_spell_booking_path(@spell), class: 'linnn' do %>
           <h2 class="nav-link-register booking_link"> Book <%= @spell.name %></h2>
         <% end %>
       </div>
