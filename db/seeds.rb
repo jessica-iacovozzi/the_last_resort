@@ -1,5 +1,6 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
+require "open-uri"
 
 # User seeds
 puts "Cleaning database..."
@@ -65,9 +66,17 @@ always_clean = { name: "Always Clean",
                  location: "Mile-End",
                  category: "Home",
                  price: "45" }
+background_img = [
+  'https://res.cloudinary.com/dppymdnxh/image/upload/v1668616924/spell%20images/vera-velichko-potions-poison-skull-wallpaper_vornxb.jpg',
+  'https://res.cloudinary.com/dppymdnxh/image/upload/v1668617000/spell%20images/2306148a6826c3849554ff6e82f358c0_tm8orh.jpg',
+  'https://res.cloudinary.com/dppymdnxh/image/upload/v1668616976/spell%20images/bdf4e8e60c1fedae47811e60754532c1_hnmf8b.png'
+]
 [love_bond, cook_well, disable_stalker, block_mother_in_law, always_clean].each do |attributes|
   spell = Spell.create!(attributes)
   puts "Created #{spell.name}"
+  file = URI.open(background_img.sample)
+  spell.photo.attach(io: file, filename: "spell1.jpeg", content_type: 'image/png')
+  spell.save
 end
 puts "Finished!"
 

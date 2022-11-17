@@ -5,7 +5,6 @@ class Spell < ApplicationRecord
 
   validates :name, presence: true
   validates :category, presence: true
-  # validates :category, acceptance: { accept: ['home', 'self', 'love', 'social', 'family', 'career'] }
   validates :description, presence: true
   validates :location, presence: true
   validates :price, presence: true
@@ -17,4 +16,6 @@ class Spell < ApplicationRecord
                   using: {
                     tsearch: { prefix: true } # <-- now `superman batm` will return something!
                   }
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 end

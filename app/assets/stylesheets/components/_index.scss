@@ -2,11 +2,13 @@
 @import "alert";
 @import "avatar";
 @import "banner";
+@import "delete_btn";
 @import "homecards";
 @import "form_legend_clear";
 @import "navbar";
 @import "footer";
 @import "notification";
+@import "map";
 
 .index_title{
   background-color: #ec5858;
@@ -21,7 +23,6 @@
   margin: 0px auto 0;
   width: 100vw;
 }
-
 .text__box--adj{
   height: 100px;
   display: flex;
