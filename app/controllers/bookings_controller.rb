@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-
   def show
     @booking = Booking.find(params[:id])
     @spell = Spell.find(@booking.spell_id)
@@ -34,7 +33,7 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to my_bookings_path, status: :see_other
+    redirect_to booking_path, status: :see_other
   end
 
   private
