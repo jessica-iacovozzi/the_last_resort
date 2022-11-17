@@ -41,15 +41,8 @@
                     <p><%= spell.location %></p>
                   </div>
                   <h2 class="card-trip-pricing price">£<%= spell.price%></h2>
-
-                  <%# images  %>
-                  <%= cl_image_tag spell.photo.key, class:'card-trip-user avatar-bordered'%>
-
-
-                </div>
-                  <%# user image end editing %>
-
-
+                  <%# original image %>
+                  <%= image_tag @user_img.sample, class: 'card-trip-user avatar-bordered' %>
                 </div>
               </div>
           <% end %>
