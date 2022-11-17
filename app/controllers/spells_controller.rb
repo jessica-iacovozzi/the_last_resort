@@ -2,6 +2,12 @@ class SpellsController < ApplicationController
   def index
     @spells = Spell.all
     images
+    @markers = @spells.geocoded.map do |spell|
+      {
+        lat: spell.latitude,
+        lng: spell.longitude
+      }
+    end
   end
 
   def my_spells
