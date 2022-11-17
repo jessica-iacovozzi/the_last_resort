@@ -6,7 +6,5 @@
 <p>Location: <%= spell.location%></p>
 <p>Price: <%= spell.price%>$</p>
 
-
- <div class="my_spells_img", style="background-image: url(<%= spell.photo.attached? ? cl_image_path(spell.photo.key) : asset_path(@images.sample) %>)">
 </div>
 <% end %>
