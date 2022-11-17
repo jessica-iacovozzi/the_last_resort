@@ -15,3 +15,8 @@
     <%= f.button :submit %>
   </div>
 <% end %>
+
+<%= f.input :location,
+  input_html: {data: {location_autocomplete_target: "location"}},
+  wrapper_html: {data: {controller: "location-autocomplete", location_autocomplete_api_key_value: ENV["MAPBOX_API"]}}
+%>
