@@ -32,11 +32,11 @@
   margin: 0 auto;
   list-style: none;
   gap: 19px;
-  width: 847px;
+  // width: 847px;
   /* height: 100%; */
   /* padding-bottom: 96px; */
   /* padding-top: 39px; */
-  padding: 36px 0px 58px 0px;
+  // padding: 36px 0px 58px 0px;
   // border: 1px solid red;
 
   &__curve {
@@ -270,4 +270,10 @@
 }
 .photo{
   background-size: cover;
+}
+
+.card-section--mod{
+  background-color: #ec5858;
+  margin: 0px auto 0;
+  width: 50vw;
 }

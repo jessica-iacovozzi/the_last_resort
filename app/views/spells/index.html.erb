@@ -1,42 +1,46 @@
 <h1 class='index_title'>All Spells</h1>
-
-<div style="width: 100%; height: 600px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API'] %>">
-</div>
-
-<div class="card-section--mod">
-  <%# Cards section %>
-  <%# <div class="cards">
-  <div class="cards_wrapper"> %>
-  <ul class="cards">
-    <div class="cards__wrapper_resize">
-      <% @spells.each do |spell| %>
-        <li class="card__Separate">
-          <%= link_to spell_path(spell) do %>
-            <div class="card-trip">
-              <%# <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" /> %>
-              <%= image_tag @background_img.sample %>
-              <div class="card-trip-infos">
-                <div class="text__box--adj">
-                  <div>
-                    <h2><%= spell.name %></h2>
-                    <p><%= spell.description %></p>
-                  </div>
-                  <div>
-                    <p><%= spell.category %></p>
-                    <p class="location"><%= spell.location %></p>
+  <div class="main-container">
+    <div class="card-section--mod">
+      <%# Cards section %>
+      <%# <div class="cards">
+      <div class="cards_wrapper"> %>
+      <ul class="cards">
+        <div class="cards__wrapper_resize">
+          <% @spells.each do |spell| %>
+            <li class="card__Separate">
+              <%= link_to spell_path(spell) do %>
+                <div class="card-trip">
+                  <%# <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" /> %>
+                  <%= image_tag @background_img.sample %>
+                  <div class="card-trip-infos">
+                    <div class="text__box--adj">
+                      <div>
+                        <h2><%= spell.name %></h2>
+                        <p><%= spell.description %></p>
+                      </div>
+                      <div>
+                        <p><%= spell.category %></p>
+                        <p class="location"><%= spell.location %></p>
+                      </div>
+                    </div>
+                    <h2 class="card-trip-pricing price">$<%= spell.price%></h2>
+                    <%= image_tag @user_img.sample, class: 'card-trip-user avatar-bordered' %>
                   </div>
                 </div>
-                <h2 class="card-trip-pricing price">$<%= spell.price%></h2>
-                <%= image_tag @user_img.sample, class: 'card-trip-user avatar-bordered' %>
-              </div>
-            </div>
+              <% end %>
+            </li>
           <% end %>
-        </li>
-      <% end %>
+        </div>
+      </ul>
+      <%# </div> %>
     </div>
-  </ul>
-  <%# </div> %>
+
+    <div class ="map-container">
+      <div id='map' class ="map"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API'] %>">
+      </div>
+    </div>
+  </div>
 </div>
