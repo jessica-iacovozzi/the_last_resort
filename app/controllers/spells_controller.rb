@@ -5,7 +5,9 @@ class SpellsController < ApplicationController
     @markers = @spells.geocoded.map do |spell|
       {
         lat: spell.latitude,
-        lng: spell.longitude
+        lng: spell.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {spell: spell}),
+        image_url: helpers.asset_url("pin.png")
       }
     end
   end
