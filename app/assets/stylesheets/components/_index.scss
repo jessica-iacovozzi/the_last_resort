@@ -2,6 +2,7 @@
 @import "alert";
 @import "avatar";
 @import "banner";
+@import "delete_btn";
 @import "homecards";
 @import "form_legend_clear";
 @import "navbar";
@@ -16,6 +17,12 @@
   margin-bottom: -22px;
   text-align: center;
   z-index: 1;
+}
+
+.card-section--mod{
+  background-color: #ec5858;
+  margin: 0 auto;
+  width: 100vw;
 }
 
 .text__box--adj{

@@ -1,12 +1,10 @@
 
 .card-section{
-  // max-width: 1400px;
-  // height: 913px;
   background-color: $bg-main;
-    margin: 40px auto 0;
-    width: 100vw;
-    // border: 1px solid red;
+  margin: 40px auto 0;
+  width: 100vw;
 }
+
 .cards__wrapper_resize{
   width: 880px;
   display: flex;
@@ -16,28 +14,14 @@
   flex-direction: row;
   gap: 13px;
 }
+
 .cards{
-  // height: 100%;
-  // width: 80%;
-  // background-color: #ec5858;
-  // z-index: 2;
-  // border:#ffffff00;
   display: flex;
   flex-flow: row wrap;
-  /* flex-shrink: 0; */
-  /* justify-content: flex-start; */
-  /* align-items: center; */
   flex-direction: row;
-  /* overflow-x: scroll; */
   margin: 0 auto;
   list-style: none;
   gap: 19px;
-  // width: 847px;
-  /* height: 100%; */
-  /* padding-bottom: 96px; */
-  /* padding-top: 39px; */
-  // padding: 36px 0px 58px 0px;
-  // border: 1px solid red;
 
   &__curve {
     position: absolute;
@@ -60,20 +44,8 @@
 // -----------
 
 .card-trip {
-  // overflow: hidden;
-  // background: white;
-  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  // width:  400px;
-  // -----
   background: $white;
   width: 273px;
-  /* padding-bottom: 20px; */
-  /* height: 200px; */
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* flex-wrap: wrap; */
-  /* margin: 20px auto; */
   -o-object-fit: cover;
   object-fit: cover;
   background-size: cover;
@@ -81,24 +53,19 @@
   background-position: center;
   position: relative;
   flex-direction: column;
+  border-radius: 25px 25px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
 
 .card-trip > img {
-  // height: 200px;
-  // width: 300px;
-  // object-fit: cover;
-  // -----
   height: 270px;
   width: 100%;
+  border-radius: 25px 25px 0 0;
 }
-
 .card-trip h2 {
-  // font-size: 16px;
   font-weight: bold;
   margin: 0;
-  // ------------
   font-size: .90rem;
-
 }
 
 .card-trip p {
@@ -107,16 +74,7 @@
   margin: 0;
 }
 
-
 .card-trip .card-trip-infos {
-  // padding: 4px;
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: flex-end;
-  // position: relative;
-  // background-color: #F4F4F4;
-
-  // -----------
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -126,6 +84,7 @@
   align-content: flex-start;
   flex-wrap: nowrap;
   color: $black;
+  border-radius: 0 0 25px 25px;
 }
 
 .card-trip-infos .card-trip-user {
@@ -142,11 +101,7 @@
 }
 
 // My addons
-
 .cards_wrapper{
-  // border: 5px solid rgb(240, 240, 240);
-  // overflow-x: scroll;
-  // height: 350px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -158,18 +113,13 @@
   flex-shrink:0;
   gap: 10px;
   border-radius: 5px;
-  // &::-webkit-scrollbar {
-  //   display: none;
-  // }
 }
+
 .card {
   border: 2px solid $border;
   width:100%;
-  // height:500px;
   border-radius: 5px;
   list-style: none;
-  // background-color: rgb(236, 174, 236);
-  // padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,13 +130,14 @@
   background-color: $bg-main;
   overflow-x: scroll;
 }
+
 .card__Separate{
   position: relative;
-  // padding-bottom: 6px;
   a:link, a:visited{
     text-decoration: none;
   }
 }
+
 .card__Separate h2{
   font-size: 1.2rem;
 }
@@ -198,8 +149,6 @@
     flex-wrap: wrap;
     align-items: flex-end;
 }
-
-
 
 // ---------------------------
 
