@@ -1,7 +1,11 @@
 class SpellsController < ApplicationController
   def index
-    @spells = Spell.all
-    images
+    if params[:query].present?
+      @spells = Spell.search_by_category_location_name_and_description(params[:query])
+    else
+      @spells = Spell.all
+      images
+    end
   end
 
   def my_spells
