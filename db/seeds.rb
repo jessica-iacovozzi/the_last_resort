@@ -44,7 +44,7 @@ Spell.destroy_all
 
 puts "Creating spells..."
 love_bond = { name: "Love Bond",
-              user: @hugo,
+              user: @hugo.id,
               description: "Make someone fall in love with you",
               location: "92230, Gennevilliers, Hauts-de-Seine, France",
               category: "Love",
