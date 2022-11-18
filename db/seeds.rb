@@ -13,25 +13,25 @@ hugo = { first_name: 'Hugo',
          address: 'Hochelaga',
          email: 'hd@gmail.com',
          password: '123456',
-         picture_url: '' }
+         avatar: '' }
 jessica = { first_name: 'Jessica',
             last_name: 'Iacovozzi',
             address: 'Lasalle',
             email: 'ji@gmail.com',
             password: '123456',
-            picture_url: '' }
+            avatar: '' }
 giovanni = { first_name: 'Giovanni',
              last_name: 'Reid',
              address: 'Rockland',
              email: 'gr@gmail.com',
              password: '123456',
-             picture_url: '' }
+             avatar: '' }
 eva = { first_name: 'Eva',
         last_name: 'Roux',
         address: 'Plateau',
         email: 'er@gmail.com',
         password: '123456',
-        picture_url: '' }
+        avatar: '' }
 
 [hugo, jessica, giovanni, eva].each do |attributes|
   user = User.create!(attributes)
@@ -46,12 +46,13 @@ puts "Creating spells..."
 love_bond = { name: "Love Bond",
               user: User.all.sample,
               description: "Make someone fall in love with you",
-              location: "Villeray",
+              location: "533 Av. Casgrain, Montreal",
               category: "Love",
               price: "95" }
 cook_well = { name: "Cook Well",
               user: User.all.sample,
-              description: "Bring out the best taste in you dish, everytime", location: "Plateau",
+              description: "Bring out the best taste in you dish, everytime",
+              location: "1614 Dixie St, Ottawa",
               price: "65",
               category: "Home" }
 disable_stalker = { name: "Disable Stalker",
