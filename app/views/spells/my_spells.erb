@@ -1,25 +1,32 @@
 <h1 class='index_title'>My Spells</h1>
 <% @spells.map do |spell| %>
-  <div class="show__container">
+  <div class="height_auto show__container">
     <div class="show_wrapper">
       <div class="show__text">
         <h2 class='show_text_h2'>
-          <%= spell.name %>
+          <%= spell.name.capitalize %>
         </h2>
         <div class="show__text_box">
           <div class="desc__box">
             <p class="desc">Description:</p>
-            <p><%= spell.description %></p>
+            <p><%= spell.description.capitalize %></p>
           </div>
           <div>
             <p class="category_location">
-              <span><span class="desc">Category:</span> <%= spell.category %></span> <span><span class="desc">Location:</span> <%= spell.location%></span>
+              <span><span class="desc">Category:</span> <%= spell.category.capitalize %></span> <span><span class="desc">Location:</span> <%= spell.location.capitalize %></span>
             </p>
           </div>
         </div>
         <p class= 'show-price'>Price: <span>$<%= spell.price%></span></p>
       </div>
-      <%= cl_image_tag spell.photo.key, class: 'show__img' %>
+      <div>
+        <% if spell.photo.attached? %>
+          <%= cl_image_tag spell.photo.key, class: 'show__img' %>
+        <% end  %>
+        <% if spell.photo.attached? == false %>
+          <%= image_tag @background_img.sample, class: 'show__img' %>
+        <% end  %>
+      </div>
     </div>
   </div>
 <% end %>
