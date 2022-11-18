@@ -2,7 +2,7 @@
   background-color: #ec5858;
   color: white;
   width: 100vw;
-  height: 1010px;
+  height: 939px;
   position: relative;
   display: flex;
   align-items: center;
@@ -24,7 +24,6 @@
 .form-label {
   font-size: 18px;
 }
-
 .banner_curve--mod {
   bottom: 0px;
   z-index: 1;
@@ -33,18 +32,16 @@
 // ---
 .curvy {
   position: absolute;
-  bottom: -66px;
+  bottom: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
 }
-
-curvy .shape-fill {
+.curvy .shape-fills {
   fill: #9b2121;
 }
-
 // --
 .simple_form .new_spell{
   z-index: 2;
@@ -58,7 +55,7 @@ curvy .shape-fill {
   position: absolute;
   padding: 10px 15px;
   text-align: center;
-  top: 6%;
+  top: 10.8%;
   left: 15%;
   color: rgb(255, 255, 255);
   font-size: 1.2rem;
@@ -80,7 +77,7 @@ curvy .shape-fill {
 .form__submit{
   position: absolute;
   padding: 10px 15px;
-  bottom: -158px;
+  bottom: -74px;
   left: 0;
   background-color: transparent;
   border-radius:  5px;
