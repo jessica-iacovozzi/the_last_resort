@@ -12,6 +12,8 @@
 @import "map";
 
 .index_title{
+  font-family: 'Lancelot', sans-serif;
+  font-size: 3.5rem;
   background-color: #ec5858;
   color: white;
   padding: 10px;
@@ -19,6 +21,7 @@
   text-align: center;
   z-index: 1;
   margin: 0;
+  padding: 25px 0;
 }
 
 .card-section--mod{
