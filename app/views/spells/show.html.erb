@@ -13,14 +13,14 @@
       </div>
         <div>
           <p class="category_location">
-            <span><span class="desc">Category:</span> <%= @spell.category %></span> <span><span class="desc">Location:</span> <%= @spell.location%></span>
+            <span><span class="desc">Category:</span> <%= @spell.category.capitalize %></span> <span><span class="desc">Location:</span> <%= @spell.location.capitalize%></span>
           </p>
         </div>
       </div>
       <p class= 'show-price'>Price: <span>$<%= @spell.price%></span></p>
       <div class="flex__link">
-        <%= link_to new_spell_booking_path(@spell), class: 'linnn' do %>
-          <h2 class="nav-link-register booking_link"> Book <%= @spell.name %></h2>
+        <%= link_to new_spell_booking_path(@spell) do %>
+          <h2 class="nav-link-register booking_link"> Book <%= @spell.name.capitalize %></h2>
         <% end %>
       </div>
     </div>
