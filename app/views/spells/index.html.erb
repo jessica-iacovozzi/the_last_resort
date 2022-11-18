@@ -10,6 +10,10 @@
                   <% if spell.photo.attached? %>
                   <%= cl_image_tag spell.photo.key, class: 'show__img border-r' %>
                   <% end  %>
+
+                  <% if spell.photo.attached? == false %>
+                    <%= image_tag @background_img.sample %>
+                  <% end  %>
                   <div class="card-trip-infos">
                     <div class="text__box--adj">
                       <div>

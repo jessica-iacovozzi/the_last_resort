@@ -1,7 +1,7 @@
 class SpellsController < ApplicationController
+  before_action :images, only: %i[index my_spells show]
   def index
     @spells = Spell.all
-    images
     @markers = @spells.geocoded.map do |spell|
       {
         lat: spell.latitude,
@@ -22,7 +22,6 @@ class SpellsController < ApplicationController
 
   def show
     @spell = Spell.find(params[:id])
-    images
   end
 
   def create
