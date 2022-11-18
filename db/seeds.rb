@@ -96,7 +96,7 @@ change_height = { name: "Change my height",
                   description: "Choose whatever height you want to be",
                   location: "34345, Daedeok-gu, Daejeon, South Korea",
                   category: "Self",
-                  price: "1000" }
+                  price: "25" }
 background_img = [
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1668616924/spell%20images/vera-velichko-potions-poison-skull-wallpaper_vornxb.jpg',
   'https://res.cloudinary.com/dppymdnxh/image/upload/v1668617000/spell%20images/2306148a6826c3849554ff6e82f358c0_tm8orh.jpg',
