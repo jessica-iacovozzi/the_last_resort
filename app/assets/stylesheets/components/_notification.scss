@@ -2,9 +2,10 @@
   display: flex;
   align-items: center;
   margin-bottom: 8px;
-  background: white;
+  background: #301c3f;
   padding: 8px 16px;
-  border: 1px solid rgb(235,235,235);
+  border: 3px solid #ebebeb;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
 .notification .notification-content {
@@ -15,10 +16,11 @@
 .notification p {
   margin: 0;
   line-height: 1.4;
+  color: rgb(235, 225, 225);
 }
 
 .notification small {
-  color: #999999;
+  color: #4ac52a;
   font-weight: bold;
 }
 .notification .notification-actions {
@@ -39,4 +41,22 @@
 
 .notification .notification-actions a:hover {
   color: #555555;
+}
+
+.container-request {
+  background-color: #ec5858;
+}
+
+.requested-font {
+  font-family: 'Lancelot', cursive;
+  margin-bottom: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.container-wrapper {
+  width: 100vw;
+  min-height: 100%;
+  background-color: #ec5858;
+  padding: 75px;
 }
