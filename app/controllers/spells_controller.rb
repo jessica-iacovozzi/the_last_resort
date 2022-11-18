@@ -1,14 +1,15 @@
 class SpellsController < ApplicationController
   before_action :images, only: %i[index my_spells show]
   def index
-    @spells = Spell.all
-    @markers = @spells.geocoded.map do |spell|
-      {
-        lat: spell.latitude,
-        lng: spell.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { spell: }),
-        image_url: helpers.asset_url("location.png")
-      }
+    if params[:query].present?
+      @spells = Spell.search_by_category_location_name_and_description(params[:query])
+      # @spells = Spell.all
+      # images
+      markers
+    else
+      @spells = Spell.all
+      images
+      markers
     end
   end
 
@@ -31,6 +32,17 @@ class SpellsController < ApplicationController
       redirect_to spell_path(@spell), notice: "Your spell was created!"
     else
       render :new, status: :unprocessable_entity
+    end
+  end
+
+  def markers
+    @markers = @spells.geocoded.map do |spell|
+      {
+        lat: spell.latitude,
+        lng: spell.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {spell: spell}),
+        image_url: helpers.asset_url("pin.png")
+      }
     end
   end
 
