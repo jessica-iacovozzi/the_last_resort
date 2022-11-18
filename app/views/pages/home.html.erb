@@ -24,18 +24,25 @@
 </div>
 
 <div class="card-section">
-      <ul class="cards">
-      <div class="cards__wrapper_resize">
+      <ul class="cards margin-zero padding-bot-80px padding_top-80px">
+      <div class="cards__wrapper_resize margin-zero">
         <% @spells.each do |spell| %>
           <li class="card__Separate">
           <%= link_to spell_path(spell) do %>
               <div class="card-trip">
-                <%# Spell bg image  %>
-                <%= cl_image_tag spell.photo.key %>
+
+                <% if spell.photo.attached? %>
+                  <%= cl_image_tag spell.photo.key, class: 'show__img border-r' %>
+                <% end  %>
+
+                <% if spell.photo.attached? == false %>
+                  <%= image_tag @background_img.sample %>
+                <% end  %>
+
                 <div class="card-trip-infos">
                   <div>
-                    <h2><%= spell.name %></h2>
-                    <p><%= spell.location %></p>
+                    <h2><%= spell.name.capitalize %></h2>
+                    <p><%= spell.location.capitalize %></p>
                   </div>
                   <h2 class="card-trip-pricing price">£<%= spell.price%></h2>
                   <%= image_tag @user_img.sample, class: 'card-trip-user avatar-bordered' %>
