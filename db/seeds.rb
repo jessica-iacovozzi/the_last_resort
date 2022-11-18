@@ -12,22 +12,26 @@ hugo = { first_name: 'Hugo',
          last_name: 'Dulac',
          address: 'Hochelaga',
          email: 'hd@gmail.com',
-         password: '123456' }
+         password: '123456',
+         picture_url: '' }
 jessica = { first_name: 'Jessica',
             last_name: 'Iacovozzi',
             address: 'Lasalle',
             email: 'ji@gmail.com',
-            password: '123456' }
+            password: '123456',
+            picture_url: '' }
 giovanni = { first_name: 'Giovanni',
              last_name: 'Reid',
              address: 'Rockland',
              email: 'gr@gmail.com',
-             password: '123456' }
+             password: '123456',
+             picture_url: '' }
 eva = { first_name: 'Eva',
         last_name: 'Roux',
         address: 'Plateau',
         email: 'er@gmail.com',
-        password: '123456' }
+        password: '123456',
+        picture_url: '' }
 
 [hugo, jessica, giovanni, eva].each do |attributes|
   user = User.create!(attributes)
