@@ -22,12 +22,20 @@
       </div>
 
       <div class="search">
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search.." aria-label="Search">
-          <button class="btn my-2 my-sm-0" type="submit">Submit</button>
-        </form>
+            <%= form_with url: spells_path, method: :get, class: "d-flex my-3" do %>
+              <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "Find a spell"
+              %>
+              <%= submit_tag "Search", class: "btn my-2 my-sm-0 btn btn-primary" %>
+            <% end %>
       </div>
     </div>
+        <%# <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search.." aria-label="Search">
+          <button class="btn my-2 my-sm-0" type="submit">Submit</button>
+        </form> %>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">

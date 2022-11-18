@@ -9,6 +9,13 @@ class Spell < ApplicationRecord
   validates :location, presence: true
   validates :price, presence: true
   validates :user, presence: true
+
+  include PgSearch::Model
+  pg_search_scope :search_by_category_location_name_and_description,
+                  against: %i[category location description name],
+                  using: {
+                    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+                  }
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
 end
