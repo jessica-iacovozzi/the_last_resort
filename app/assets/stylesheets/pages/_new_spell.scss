@@ -1,0 +1,138 @@
+.new_spell__container {
+  background-color: #ec5858;
+  color: white;
+  width: 100vw;
+  height: 939px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.form_wrapper{
+  margin-bottom: 150px;
+}
+.new_spell__container > h1{
+  font-family: 'Lancelot';
+}
+.form-inputs{
+  color: white;
+}
+.form-control {
+  padding: 0px 11px 0px 13px;
+}
+.form-label {
+  font-size: 18px;
+}
+.banner_curve--mod {
+  bottom: 0px;
+  z-index: 1;
+  fill: #9b2121;
+}
+// ---
+.curvy {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+.curvy .shape-fills {
+  fill: #9b2121;
+}
+// --
+.simple_form .new_spell{
+  z-index: 2;
+}
+.back-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #751010;
+  border-radius: 5px;
+  position: absolute;
+  padding: 10px 15px;
+  text-align: center;
+  top: 10.8%;
+  left: 15%;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+  &:link, &:visited{
+    color: rgb(255, 255, 255);
+  }
+  &:hover, &:active{
+    transform: scale(1.05)
+  }
+  p {
+    margin: 0;
+  }
+}
+.form-actions {
+  position: relative;
+}
+.form__submit{
+  position: absolute;
+  padding: 10px 15px;
+  bottom: -74px;
+  left: 0;
+  background-color: transparent;
+  border-radius:  5px;
+  border: 3px solid #751010;
+  border-radius: 5px;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  &:hover, &:active{
+    padding: 10px 15px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 3px solid #751010;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+  }
+}
+@keyframes witch {
+  0% {
+    top: 0%;
+    left: 0%;
+  }
+  30% {
+    top: 0%;
+    left: 30%;
+  }
+  52% {
+    top: 0%;
+    left: 45%;
+  }
+  72% {
+    top: 0%;
+    left: 70%;
+  }
+  100% {
+    top: 0%;
+    left: 100%;
+  }
+}
+
+.hero-image{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 40%;
+  left:  0;
+  animation: witch 5s infinite;
+  z-index:1
+}
+
+.form-control[type="file"]:not(:disabled):not([readonly]) {
+  cursor: pointer;
+  background-color: #dfa0a0;
+  /* color: red; */
+  font-family: 'Lancelot';
+  color: #f8fdff;
+  border-radius: 5px;
+}
