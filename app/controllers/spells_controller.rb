@@ -41,7 +41,7 @@ class SpellsController < ApplicationController
         lat: spell.latitude,
         lng: spell.longitude,
         info_window: render_to_string(partial: "info_window", locals: {spell: spell}),
-        image_url: helpers.asset_url("pin.png")
+        image_url: helpers.asset_url("location.png")
       }
     end
   end
