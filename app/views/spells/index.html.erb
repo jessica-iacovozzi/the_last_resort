@@ -26,7 +26,7 @@
                       </div>
                     </div>
                     <h2 class="card-trip-pricing price">$<%= spell.price%></h2>
-                    <%= cl_image_tag @user.avatar.key, class: 'card-trip-user avatar-bordered' %>
+                    <%= image_tag spell.user.avatar, class: 'card-trip-user avatar-bordered' %>
                   </div>
                 </div>
               <% end %>
