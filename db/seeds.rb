@@ -8,32 +8,32 @@ Booking.destroy_all
 User.destroy_all
 
 puts "Creating users..."
-@hugo = { first_name: 'Hugo',
-          last_name: 'Dulac',
-          address: 'Hochelaga',
-          email: 'hd@gmail.com',
-          password: '123456',
-          avatar: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1668617350/spell%20images/users/03-steve_uaz0jx.jpg' }
-@jessica = { first_name: 'Jessica',
-             last_name: 'Iacovozzi',
-             address: 'Lasalle',
-             email: 'ji@gmail.com',
-             password: '123456',
-             avatar: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1668617351/spell%20images/users/09-angela_wj9jud.jpg' }
-@giovanni = { first_name: 'Giovanni',
-              last_name: 'Reid',
-              address: 'Rockland',
-              email: 'gr@gmail.com',
-              password: '123456',
-              avatar: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1668617350/spell%20images/users/01-dimitri_gjcpcp.jpg' }
-@eva = { first_name: 'Eva',
-         last_name: 'Roux',
-         address: 'Plateau',
-         email: 'er@gmail.com',
+hugo = { first_name: 'Hugo',
+         last_name: 'Dulac',
+         address: 'Hochelaga',
+         email: 'hd@gmail.com',
          password: '123456',
-         avatar: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1668617350/spell%20images/users/02-tanya_ilefnh.jpg' }
+         avatar: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1668617350/spell%20images/users/03-steve_uaz0jx.jpg' }
+jessica = { first_name: 'Jessica',
+            last_name: 'Iacovozzi',
+            address: 'Lasalle',
+            email: 'ji@gmail.com',
+            password: '123456',
+            avatar: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1668617351/spell%20images/users/09-angela_wj9jud.jpg' }
+giovanni = { first_name: 'Giovanni',
+             last_name: 'Reid',
+             address: 'Rockland',
+             email: 'gr@gmail.com',
+             password: '123456',
+             avatar: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1668617350/spell%20images/users/01-dimitri_gjcpcp.jpg' }
+eva = { first_name: 'Eva',
+        last_name: 'Roux',
+        address: 'Plateau',
+        email: 'er@gmail.com',
+        password: '123456',
+        avatar: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1668617350/spell%20images/users/02-tanya_ilefnh.jpg' }
 
-[@hugo, @jessica, @giovanni, @eva].each do |attributes|
+[hugo, jessica, giovanni, eva].each do |attributes|
   user = User.create!(attributes)
   puts "Created #{user.first_name}"
 end
@@ -44,55 +44,55 @@ Spell.destroy_all
 
 puts "Creating spells..."
 love_bond = { name: "Love Bond",
-              user: @hugo.id,
+              user: User.all.sample,
               description: "Make someone fall in love with you",
               location: "92230, Gennevilliers, Hauts-de-Seine, France",
               category: "Love",
               price: "95" }
 cook_well = { name: "Cook Well",
-              user: @giovanni,
+              user: User.all.sample,
               description: "Bring out the best taste in you dish, everytime",
               location: "8787 Woodbine Avenue, Markham, Ontario L3R 0P4, Canada",
               price: "65",
               category: "Home" }
 disable_stalker = { name: "Disable Stalker",
-                    user: @eva,
+                    user: User.all.sample,
                     description: "Any stalker who starts following you will suddenly get injured",
                     location: "744 High Street, Kew East Victoria 3102, Australia",
                     price: "110",
                     category: "Social" }
 block_mother_in_law = { name: "Block Mother In Law",
-                        user: @hugo,
+                        user: User.all.sample,
                         description: "Any call from your mother in law will be mysteriously  redirected",
                         location: "900 Parish Loop, Hinesville, Georgia 31313, United States",
                         category: "Family",
                         price: "45" }
 always_clean = { name: "Always Clean",
-                 user: @jessica,
+                 user: User.all.sample,
                  description: "Every rooms in your home clean themselves",
                  location: "5454 Toronto Road, Haverhill, Florida 33415, United States",
                  category: "Home",
                  price: "45" }
 upgrade_car = { name: "Upgrade Your Car",
-                user: @giovanni,
+                user: User.all.sample,
                 description: "Everyone will perceive your car as a Maserati",
                 location: "Steinbruchbrücke 0987, 2380 Liesing, Austria",
                 category: "Social",
                 price: "450" }
 last_longer = { name: "Last longer",
-                user: @giovanni,
+                user: User.all.sample,
                 description: "... You know what I'm talking about",
                 location: "6969 Chemin Montauban, Saint-Damien, Quebec J0K 2E0, Canada",
                 category: "Self",
                 price: "100" }
 upgrade_my_css = { name: "Upgrade my CSS",
-                   user: @eva,
+                   user: User.all.sample,
                    description: "No matter your skill level, your CSS code will be amazing",
                    location: "29793, Torrox, Málaga, Spain",
                    category: "Self",
                    price: "1000" }
 change_height = { name: "Change my height",
-                  user: @jessica,
+                  user: User.all.sample,
                   description: "Choose whatever height you want to be",
                   location: "34345, Daedeok-gu, Daejeon, South Korea",
                   category: "Self",
@@ -115,20 +115,36 @@ puts "Finished!"
 puts "Cleaning database..."
 
 puts "Creating bookings..."
-@bookings = [{ start_date: Date.new(2022, 11, 20),
-               end_date: Date.new(2022, 11, 24),
+@bookings = [{ start_date: Date.new(2022, 11, 19),
+               end_date: Date.new(2022, 11, 20),
                user: User.all.sample,
                spell: Spell.all.sample },
-             { start_date: Date.new(2022, 11, 19),
-               end_date: Date.new(2022, 11, 23),
+             { start_date: Date.new(2022, 11, 21),
+               end_date: Date.new(2022, 11, 25),
                user: User.all.sample,
                spell: Spell.all.sample },
-             { start_date: Date.new(2022, 11, 20),
-               end_date: Date.new(2022, 11, 27),
+             { start_date: Date.new(2022, 11, 29),
+               end_date: Date.new(2022, 11, 30),
                user: User.all.sample,
                spell: Spell.all.sample },
-             { start_date: Date.new(2022, 11, 23),
-               end_date: Date.new(2022, 11, 27),
+             { start_date: Date.new(2022, 12, 10),
+               end_date: Date.new(2022, 12, 15),
+               user: User.all.sample,
+               spell: Spell.all.sample },
+             { start_date: Date.new(2022, 12, 16),
+               end_date: Date.new(2022, 12, 17),
+               user: User.all.sample,
+               spell: Spell.all.sample },
+             { start_date: Date.new(2022, 12, 19),
+               end_date: Date.new(2022, 12, 21),
+               user: User.all.sample,
+               spell: Spell.all.sample },
+             { start_date: Date.new(2022, 12, 24),
+               end_date: Date.new(2022, 12, 25),
+               user: User.all.sample,
+               spell: Spell.all.sample },
+             { start_date: Date.new(2022, 12, 30),
+               end_date: Date.new(2022, 12, 31),
                user: User.all.sample,
                spell: Spell.all.sample }]
 
