@@ -28,12 +28,24 @@
 .banner_curve--mod {
   bottom: 0px;
   z-index: 1;
+  fill: #9b2121;
+}
+// ---
+.curvy {
+  position: absolute;
+  bottom: -66px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
-.banner_curve .shape-fill {
+curvy .shape-fill {
   fill: #9b2121;
 }
 
+// --
 .simple_form .new_spell{
   z-index: 2;
 }
