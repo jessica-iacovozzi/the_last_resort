@@ -19,23 +19,6 @@
   margin-bottom: 30px;
   list-style: none;
   gap: 19px;
-  // &__curve {
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   overflow: hidden;
-  //   line-height: 0;
-  // }
-  // &__curve, &__curve_svg {
-  //   position: relative;
-  //   display: block;
-  //   width: calc(153% + 1.3px);
-  //   height: 79px;
-  // }
-  // &__curve .shape-fill {
-  //   fill: $white;
-  // }
 }
 .card-trip {
   background: $white;
@@ -90,35 +73,6 @@
     color:  $card-gold;
   }
 }
-
-// .cards_wrapper{
-//   display: flex;
-//   align-items: center;
-//   flex-wrap: wrap;
-//   width: 99%;
-//   margin-top: 40px;
-//   margin-left: auto;
-//   margin-right: auto;
-//   overflow-x: scroll;
-//   flex-shrink:0;
-//   gap: 10px;
-//   border-radius: 5px;
-// }
-// .card {
-//   border: 2px solid $border;
-//   width:100%;
-//   border-radius: 5px;
-//   list-style: none;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   flex-direction: row;
-//   flex-shrink: 0;
-//   padding: 0;
-//   gap: 30px;
-//   background-color: $bg-main;
-//   overflow-x: scroll;
-// }
 .card__Separate{
   position: relative;
   a:link, a:visited{
@@ -139,80 +93,11 @@
   flex-wrap: wrap;
   align-items: flex-end;
 }
-// .contain{
-//   display: flex;
-//   flex-flow: row wrap;
-//   flex-shrink: 0;
-//   justify-content: center;
-//   align-items: center;
-//   padding: 0;
-//   gap: 30px;
-// }
-// .link__box{
-//   position: relative;
-// }
-// .index__card {
-//   // border-top: 5px solid rgb(175, 184, 41);
-//   border-left: 5px solid rgba(184, 41, 151, 0.98);
-//   border-right: 5px solid rgb(41, 63, 184);
-//   border-radius: 20px;
-//   width: 350px;
-//   height: 200px;
-//   margin: 30px auto;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   flex-wrap: wrap;
-//   margin-bottom: 20px;
-//   object-fit: cover;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   position: relative;
-//   // background-color: rgba($bg-secondary, 0.8);
-//   color: #F4F4F4;
-//   box-shadow: 0px 0px 8px rgba(255, 0, 0, 0.654);
-//   transition: all .2s ease;
-//   a:link, a:visited, a:hover, a:active{
-//     color: #F4F4F4;
-//   }
-//   &_poster{
-//     border: 5px solid white;
-//     object-fit: scale-down;
-//     height: 100%;
-//   }
-//   &_homeText{
-//     font-size: 2.4rem;
-//     text-align: center;
-//     font-weight: 700;
-//   }
-//   &_text {
-//     h3 {
-//       font-size: 2.4rem;
-//       text-align: center;
-//       font-weight: 700;
-//     }
-//   }
-//   &:link, &:visited{
-//     color: #F4F4F4;
-//   }
-//   &:hover,&:active{
-//     transform: scale(1.05);
-//     box-shadow: 5px 10px 10px rgba(255, 0, 0, 0.654);
-//   }
-// }
-// .index__card_text_link:link, .index__card_text_link:visited{
-//   color: #F4F4F4;
-// }
-// .photo{
-//   background-size: cover;
-// }
 .card-section--mod{
   background-color: #ec5858;
   margin: 0px auto 0;
   width: 50vw;
 }
-
 ul{
   padding-left: 1rem;
 }
