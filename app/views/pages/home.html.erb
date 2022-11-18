@@ -35,13 +35,13 @@
                   <%= cl_image_tag spell.photo.key, class: 'show__img border-r' %>
                 <% end  %>
 
-                  <% if spell.photo.attached? == false %>
+                <% if spell.photo.attached? == false %>
                   <%= image_tag @background_img.sample %>
                 <% end  %>
 
                 <div class="card-trip-infos">
                   <div>
-                    <h2><%= spell.name %></h2>
+                    <h2><%= spell.name.capitalize %></h2>
                     <p><%= spell.location %></p>
                   </div>
                   <h2 class="card-trip-pricing price">£<%= spell.price%></h2>

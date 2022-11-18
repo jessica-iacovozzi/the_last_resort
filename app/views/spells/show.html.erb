@@ -26,7 +26,10 @@
     </div>
     <div class="show__img_box">
       <% if @spell.photo.attached? %>
-      <%= cl_image_tag @spell.photo.key, class: 'show__img' %>
+        <%= cl_image_tag @spell.photo.key, class: 'show__img' %>
+      <% end  %>
+      <% if @spell.photo.attached? == false %>
+        <%= image_tag @background_img.sample, class: 'show__img' %>
       <% end  %>
     </div>
   </div>
