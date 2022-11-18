@@ -11,6 +11,7 @@ class SpellsController < ApplicationController
       images
       markers
     end
+    @user = User.where(id: current_user)
   end
 
   def my_spells

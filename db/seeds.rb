@@ -13,25 +13,25 @@ hugo = { first_name: 'Hugo',
          address: 'Hochelaga',
          email: 'hd@gmail.com',
          password: '123456',
-         avatar: '' }
+         avatar: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1668617350/spell%20images/users/03-steve_uaz0jx.jpg' }
 jessica = { first_name: 'Jessica',
             last_name: 'Iacovozzi',
             address: 'Lasalle',
             email: 'ji@gmail.com',
             password: '123456',
-            avatar: '' }
+            avatar: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1668617351/spell%20images/users/09-angela_wj9jud.jpg' }
 giovanni = { first_name: 'Giovanni',
              last_name: 'Reid',
              address: 'Rockland',
              email: 'gr@gmail.com',
              password: '123456',
-             avatar: '' }
+             avatar: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1668617350/spell%20images/users/01-dimitri_gjcpcp.jpg' }
 eva = { first_name: 'Eva',
         last_name: 'Roux',
         address: 'Plateau',
         email: 'er@gmail.com',
         password: '123456',
-        avatar: '' }
+        avatar: 'https://res.cloudinary.com/dppymdnxh/image/upload/v1668617350/spell%20images/users/02-tanya_ilefnh.jpg' }
 
 [hugo, jessica, giovanni, eva].each do |attributes|
   user = User.create!(attributes)
@@ -64,8 +64,8 @@ disable_stalker = { name: "Disable Stalker",
 block_mother_in_law = { name: "Block Mother In Law",
                         user: User.all.sample,
                         description: "Any call from your mother in law will be mysteriously  redirected",
-                        location: "9050 55th Ave, Queens, NY 11373, USA",
-                        category: "900 Parish Loop, Hinesville, Georgia 31313, United States",
+                        location: "900 Parish Loop, Hinesville, Georgia 31313, United States",
+                        category: "Family",
                         price: "45" }
 always_clean = { name: "Always Clean",
                  user: User.all.sample,
