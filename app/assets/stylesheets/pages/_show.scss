@@ -56,11 +56,13 @@
   font-size: 1.2rem;
 }
 .show__img{
-  // width: 350px;
+  width: 350px;
   // width: min(360px, 350px);
   height: 350px;
   border-radius: 25px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+  object-fit: cover;
+  background-size: cover;
 }
 .booking_link{
   text-align: center;
