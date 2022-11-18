@@ -1,5 +1,6 @@
-<div class="container">
-  <h1>My requested spells</h1>
+<div class="container-wrapper">
+<div class="container container-request">
+  <h1 class="requested-font">MY RESQUEST SPELLS</h1>
 
   <% @bookings.each do |booking| %>
     <div class="notification" data-controller="bookings">
@@ -16,4 +17,5 @@
       </div>
     </div>
   <% end %>
+  </div>
 </div>
